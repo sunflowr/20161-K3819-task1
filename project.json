@@ -167,10 +167,11 @@
                                           "y": 61,
                                           "parameters": {
                                              "Position X": 150,
-                                             "Position Y": 150,
+                                             "Position Y": 190,
                                              "Name": "Super Fast Food",
                                              "Info": "This food is tasty",
-                                             "Size": 100
+                                             "Size": 100,
+                                             "Icon": "Assets/icons/restaurant.png"
                                           },
                                           "ports": [],
                                           "dynamicports": [],
@@ -442,8 +443,8 @@
                   "id": "cda02252-d7fe-a0ef-beaf-9c07ed933474",
                   "type": "Animation",
                   "label": "Show resturant info",
-                  "x": 506.5889892251304,
-                  "y": 928.4362882946747,
+                  "x": 557.0277815610374,
+                  "y": 943.0798086502606,
                   "parameters": {
                      "Opacity.startMode": "explicit",
                      "Opacity.endValue": 1,
@@ -490,8 +491,8 @@
                   "id": "8015b9d2-2617-6c18-ff85-6799678a548b",
                   "type": "Animation",
                   "label": "Hide resturant info",
-                  "x": 501.55562637209925,
-                  "y": 803.8605576821642,
+                  "x": 555.2485343425809,
+                  "y": 800.6064420475896,
                   "parameters": {
                      "Position Y.endValue": 1920
                   },
@@ -513,8 +514,8 @@
                   "id": "4caf3bfb-9b56-1fe4-327c-e9e70971af06",
                   "type": "Switch",
                   "label": "Show resturant info",
-                  "x": 785.940627568335,
-                  "y": 807.635579821937,
+                  "x": 894.9535013265859,
+                  "y": 760.4509031206046,
                   "parameters": {},
                   "ports": [],
                   "dynamicports": [],
@@ -541,21 +542,9 @@
                },
                {
                   "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
-                  "fromProperty": "Size",
-                  "toId": "b5cb4d3a-8044-6c55-af89-8f799f87101b",
-                  "toProperty": "width"
-               },
-               {
-                  "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
                   "fromProperty": "Name",
                   "toId": "55cee7cb-14f0-42b3-8695-4bc7f3a759fc",
                   "toProperty": "text"
-               },
-               {
-                  "fromId": "b5cb4d3a-8044-6c55-af89-8f799f87101b",
-                  "fromProperty": "touch.tap",
-                  "toId": "ab6bdbde-021b-0eb6-50f3-b585bbba805f",
-                  "toProperty": "sendEvent"
                },
                {
                   "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
@@ -568,6 +557,24 @@
                   "fromProperty": "Info",
                   "toId": "ab6bdbde-021b-0eb6-50f3-b585bbba805f",
                   "toProperty": "Info"
+               },
+               {
+                  "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
+                  "fromProperty": "Icon",
+                  "toId": "ba1acaea-685b-2ccd-7746-2683af702a4b",
+                  "toProperty": "image"
+               },
+               {
+                  "fromId": "17238273-1cd5-f8ed-fe05-2ef661211894",
+                  "fromProperty": "touch.tap",
+                  "toId": "ab6bdbde-021b-0eb6-50f3-b585bbba805f",
+                  "toProperty": "sendEvent"
+               },
+               {
+                  "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
+                  "fromProperty": "Size",
+                  "toId": "c3b01eae-8023-1e99-60fc-3269f6662771",
+                  "toProperty": "width"
                }
             ],
             "roots": [
@@ -593,58 +600,57 @@
                   "dynamicports": [],
                   "children": [
                      {
-                        "id": "6611500a-d385-b7f5-92bc-c909fb4a092b",
-                        "type": "Stack Layout",
-                        "x": 332,
-                        "y": 277,
-                        "parameters": {},
+                        "id": "c3b01eae-8023-1e99-60fc-3269f6662771",
+                        "type": "Circle",
+                        "x": 20,
+                        "y": 137,
+                        "parameters": {
+                           "color": "#f336c5"
+                        },
                         "ports": [],
                         "dynamicports": [],
-                        "children": [
-                           {
-                              "id": "b5cb4d3a-8044-6c55-af89-8f799f87101b",
-                              "type": "Circle",
-                              "label": "Icon",
-                              "x": 20,
-                              "y": 46,
-                              "parameters": {
-                                 "width": {
-                                    "value": 100,
-                                    "unit": "px"
-                                 },
-                                 "color": "#f339ba"
-                              },
-                              "ports": [],
-                              "dynamicports": [],
-                              "children": []
-                           },
-                           {
-                              "id": "55cee7cb-14f0-42b3-8695-4bc7f3a759fc",
-                              "type": "Text",
-                              "version": 2,
-                              "label": "Name",
-                              "x": 316.21640616921997,
-                              "y": 499.76292070414615,
-                              "parameters": {
-                                 "alignY": "bottom",
-                                 "color": "#1d1d1d",
-                                 "y": 0,
-                                 "sizeMode": "childSize",
-                                 "alignX": "center"
-                              },
-                              "ports": [],
-                              "dynamicports": [],
-                              "children": []
-                           }
-                        ]
+                        "children": []
+                     },
+                     {
+                        "id": "ba1acaea-685b-2ccd-7746-2683af702a4b",
+                        "type": "Image",
+                        "version": 2,
+                        "label": "Icon",
+                        "x": 20,
+                        "y": 219,
+                        "parameters": {
+                           "alignX": "center",
+                           "clipImage": true
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                     },
+                     {
+                        "id": "55cee7cb-14f0-42b3-8695-4bc7f3a759fc",
+                        "type": "Text",
+                        "version": 2,
+                        "label": "Name",
+                        "x": 20,
+                        "y": 398,
+                        "parameters": {
+                           "alignY": "top",
+                           "color": "#1d1d1d",
+                           "y": 120,
+                           "sizeMode": "childSize",
+                           "alignX": "center"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
                      }
                   ]
                },
                {
                   "id": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
                   "type": "Component Inputs",
-                  "x": -4.63888194434297,
-                  "y": 337.32944670527047,
+                  "x": -41.38596943007187,
+                  "y": 334.7046547420041,
                   "parameters": {},
                   "ports": [
                      {
@@ -686,6 +692,14 @@
                            "name": "*"
                         },
                         "index": 4
+                     },
+                     {
+                        "name": "Icon",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 5
                      }
                   ],
                   "dynamicports": [],
@@ -732,6 +746,6 @@
       "fillMode": "aspectFit"
    },
    "rootNodeId": "2d3ccd33-f1ef-2dc5-3e1a-ca9d61cd222b",
-   "thumbnailURI": "data:image/png;base64,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",
+   "thumbnailURI": "data:image/png;base64,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hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcTIEj9hAokCRAkSVd2PQGC1E+oQJIAQZJ0ZdcT+AcjTYd0Nb4d6gAAAABJRU5ErkJggg==",
    "version": "1"
 }
