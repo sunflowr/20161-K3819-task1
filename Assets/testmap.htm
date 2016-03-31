@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        width 2048px;
+        height: 2048px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <img id="imgMap">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+var staticMapUrl = "https://maps.googleapis.com/maps/api/staticmap?center=55.6076306,12.995&size=2048x2048&scale=2&maptype=roadmap&zoom=17";
+var imgMap = document.getElementById("imgMap");
+imgMap.src = staticMapUrl;
+    </script>
+  </body>
+</html>

@@ -4,14 +4,27 @@
       {
          "name": "/Main",
          "graph": {
-            "connections": [],
+            "connections": [
+               {
+                  "fromId": "ef4c9f4f-ae19-b403-c938-7ae374192885",
+                  "fromProperty": "this",
+                  "toId": "c7c4b151-2b81-84b1-5f2c-365d00227859",
+                  "toProperty": "target"
+               },
+               {
+                  "fromId": "ef4c9f4f-ae19-b403-c938-7ae374192885",
+                  "fromProperty": "this",
+                  "toId": "44069d17-2c65-af3c-4106-ee2c9751b7d8",
+                  "toProperty": "target"
+               }
+            ],
             "roots": [
                {
                   "id": "2d3ccd33-f1ef-2dc5-3e1a-ca9d61cd222b",
                   "type": "Group",
                   "label": "Root",
                   "x": 264,
-                  "y": 278,
+                  "y": 279.410829748387,
                   "parameters": {
                      "fill": "parent"
                   },
@@ -24,29 +37,427 @@
                         "label": "Background",
                         "x": 20,
                         "y": 61,
-                        "parameters": {},
+                        "parameters": {
+                           "color": "#6a6b6d"
+                        },
                         "ports": [],
                         "dynamicports": [],
                         "children": []
                      },
                      {
-                        "id": "189062e3-73dc-05ee-617c-55a3c2f1cc31",
-                        "type": "Text",
+                        "id": "01f04cee-8cc0-1dd4-3ec0-416655648555",
+                        "type": "Group",
+                        "version": 2,
+                        "label": "Map Group",
                         "x": 20,
-                        "y": 122,
+                        "y": 290,
                         "parameters": {
-                           "alignX": "center",
-                           "alignY": "center",
-                           "text": "Hello World2",
-                           "fontSize": 150,
-                           "color": "#000000",
-                           "sizeMode": "childSize"
+                           "y": 100
                         },
                         "ports": [],
                         "dynamicports": [],
-                        "children": []
+                        "children": [
+                           {
+                              "id": "ef4c9f4f-ae19-b403-c938-7ae374192885",
+                              "type": "Group",
+                              "version": 2,
+                              "label": "Drag Group",
+                              "x": 20,
+                              "y": 61,
+                              "parameters": {
+                                 "y": 0
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": [
+                                 {
+                                    "id": "d3c77d9d-0ef8-6787-0674-124b061333b0",
+                                    "type": "Image",
+                                    "version": 2,
+                                    "x": 20,
+                                    "y": 97,
+                                    "parameters": {
+                                       "image": "Assets/staticmap.png",
+                                       "alignX": "left",
+                                       "alignY": "top",
+                                       "sizeMode": "childSize",
+                                       "width": {
+                                          "value": 2048,
+                                          "unit": "px"
+                                       },
+                                       "height": {
+                                          "value": 2048,
+                                          "unit": "px"
+                                       },
+                                       "x": 0,
+                                       "fillMode": "original",
+                                       "clipImage": false,
+                                       "y": 0,
+                                       "scaleX": 2,
+                                       "scaleY": 2
+                                    },
+                                    "ports": [],
+                                    "dynamicports": [],
+                                    "children": []
+                                 },
+                                 {
+                                    "id": "3578cf71-a377-3afe-f49c-04326941a8f8",
+                                    "type": "Group",
+                                    "version": 2,
+                                    "label": "Map overlay",
+                                    "x": 20,
+                                    "y": 158,
+                                    "parameters": {},
+                                    "ports": [],
+                                    "dynamicports": [],
+                                    "children": [
+                                       {
+                                          "id": "3f8614a9-59a1-e519-67a5-97b050c08fb5",
+                                          "type": "/Resurant item",
+                                          "label": "Resurant item",
+                                          "x": 20,
+                                          "y": 61,
+                                          "parameters": {
+                                             "Position X": 150,
+                                             "Position Y": 150,
+                                             "Name": "Super Fast Food",
+                                             "Info": "This food is tasty",
+                                             "Size": 100
+                                          },
+                                          "ports": [],
+                                          "dynamicports": [],
+                                          "children": []
+                                       },
+                                       {
+                                          "id": "00d17889-996a-6a98-2169-f43986bf8c9f",
+                                          "type": "/Resurant item",
+                                          "label": "Resurant item",
+                                          "x": 20,
+                                          "y": 122,
+                                          "parameters": {
+                                             "Position X": 850,
+                                             "Position Y": 550,
+                                             "Name": "Super Slow Food",
+                                             "Info": "This food takes forever",
+                                             "Size": 100
+                                          },
+                                          "ports": [],
+                                          "dynamicports": [],
+                                          "children": []
+                                       }
+                                    ]
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     {
+                        "id": "e468a8df-c67d-cb2c-9106-743d68d66bd4",
+                        "type": "Group",
+                        "version": 2,
+                        "label": "Title Group",
+                        "x": 335.23675977505604,
+                        "y": 732.2539071530347,
+                        "parameters": {
+                           "height": {
+                              "value": 100,
+                              "unit": "px"
+                           },
+                           "sizeMode": "explicit"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                           {
+                              "id": "13fcd2a3-070b-1c34-8084-ed0b748e931b",
+                              "type": "Rectangle",
+                              "x": 20,
+                              "y": 61,
+                              "parameters": {
+                                 "height": {
+                                    "value": 100,
+                                    "unit": "%"
+                                 },
+                                 "color": "#4575f4"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "fa6d51bd-6ae1-8efb-592a-e6e8b964f0ef",
+                              "type": "Text",
+                              "version": 2,
+                              "x": 20,
+                              "y": 92,
+                              "parameters": {
+                                 "text": "TITLE",
+                                 "x": 0,
+                                 "alignX": "center",
+                                 "alignY": "center",
+                                 "sizeMode": "childSize",
+                                 "fontSize": 50
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           }
+                        ]
                      }
                   ]
+               },
+               {
+                  "id": "c4e2f5f0-e392-9c73-0dda-ee9aaac65284",
+                  "type": "Javascript2",
+                  "label": "Javascript googlemaps",
+                  "x": 179.0728091918519,
+                  "y": 95.0129527579852,
+                  "parameters": {
+                     "useExternalFile": "no",
+                     "externalFile": "googlemaps.js",
+                     "code": "define({\n    inputs: {\n        inputValue: \"number\",\n        inputImage: \"reference\"\n    },\n    outputs: {\n        outputValue: \"number\",\n        outputImage: \"image\"\n    },\n    setup: function(inputs, outputs) {\n        outputs.outputImage = \"\";\n        console.log(inputs.inputImage);\n        \n        // Try changing output image.\n        //inputs.inputImage._internal.innerControl.setImage(\"data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7\");\n        outputs.outputImage = \"data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7\";\n\n        // Try adding a image component.\n        //var image = Noodl.createComponent(\"Image\");\n        //image.setInputValue(\"Image Path\", outputImage);\n        //inputs.iconGroup.addChild(image);\n\n        // Test googlemaps - disabled\n        //if(window.addEventListener)window.addEventListener('gMapsLoaded', initMap, false)\n        //else if(window.attachEvent)window.attachEvent('ongMapsLoaded', initMap);\n        //window.loadGoogleMaps();\n        //debugger;\n    },\n    run: function(inputs, outputs) {\n        outputs.outputImage = \"\";\n    }\n});\n\n\n// Google Maps test - not used right now\nvar map;\nvar gMapsLoaded = false;\n\nwindow.initMap = function(){\n    // Create temp div container for map.\n    var mapCanvas = document.createElement('canvas');\n    mapCanvas.id = \"map_canvas\";\n    mapCanvas.width = 300;\n    mapCanvas.height = 300;\n    mapCanvas.style[\"background-color\"] = \"#faafbe\";\n    mapCanvas.style.width = \"300px\";\n    mapCanvas.style.height = \"300px\";\n    mapCanvas.style[\"max-width\"] = \"none\";\n    mapCanvas.style.zIndex = 8;\n    mapCanvas.style.border = \"1px solid\";\n    mapCanvas.style.position = \"absolute\";\n    mapCanvas.style.right = \"100px\";\n    mapCanvas.style.bottom = \"100px\";\n    document.body.appendChild(mapCanvas);\n\n    // Create map.\n    map = new google.maps.Map(mapCanvas, {\n        center: {lat: -34.397, lng: 150.644},\n        zoom: 8,\n        scrollwheel: false\n    });\n}\n\nwindow.gMapsCallback = function(){\n    gMapsLoaded = true;\n    var event = new CustomEvent('gMapsLoaded', {bubbles: true, cancelable: true});\n    window.dispatchEvent(event);\n}\n\nwindow.loadGoogleMaps = function(){\n    if(gMapsLoaded) return window.gMapsCallback();\n    var script_tag = document.createElement('script');\n    script_tag.type = \"text/javascript\";\n    script_tag.async = true;\n    script_tag.defer = true;\n    script_tag.src = \"https://maps.googleapis.com/maps/api/js?key=AIzaSyBBaV7CJ-7dikbMmBkEBmGtWcVdCSKwPng&callback=gMapsCallback\";\n    (document.getElementsByTagName(\"head\")[0] || document.documentElement).appendChild(script_tag);\n}\n",
+                     "inputValue": 1
+                  },
+                  "ports": [],
+                  "dynamicports": [
+                     {
+                        "name": "inputValue",
+                        "type": {
+                           "name": "number"
+                        },
+                        "plug": "input",
+                        "index": 2
+                     },
+                     {
+                        "name": "inputImage",
+                        "type": {
+                           "name": "reference"
+                        },
+                        "plug": "input",
+                        "index": 3
+                     },
+                     {
+                        "name": "outputValue",
+                        "type": {
+                           "name": "number"
+                        },
+                        "plug": "output",
+                        "index": 4
+                     },
+                     {
+                        "name": "outputImage",
+                        "type": {
+                           "name": "image"
+                        },
+                        "plug": "output",
+                        "index": 5
+                     }
+                  ],
+                  "children": []
+               },
+               {
+                  "id": "c7c4b151-2b81-84b1-5f2c-365d00227859",
+                  "type": "Drag",
+                  "x": 523.3990752049273,
+                  "y": 375.2385896472862,
+                  "parameters": {
+                     "clampDragPosition.max": 640,
+                     "clampDragPosition.enabled": true,
+                     "startAt": "position 0",
+                     "snapBehavior": "none",
+                     "clampDragPosition.min": -840
+                  },
+                  "ports": [],
+                  "dynamicports": [],
+                  "children": []
+               },
+               {
+                  "id": "44069d17-2c65-af3c-4106-ee2c9751b7d8",
+                  "type": "Drag",
+                  "x": 572.5671297369471,
+                  "y": 520.6412665161139,
+                  "parameters": {
+                     "axis": "1",
+                     "snapBehavior": "none",
+                     "clampDragPosition.enabled": true,
+                     "clampDragPosition.min": -100,
+                     "clampDragPosition.max": 640
+                  },
+                  "ports": [],
+                  "dynamicports": [],
+                  "children": []
+               }
+            ]
+         }
+      },
+      {
+         "name": "/Resurant item",
+         "graph": {
+            "connections": [
+               {
+                  "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
+                  "fromProperty": "Position X",
+                  "toId": "17238273-1cd5-f8ed-fe05-2ef661211894",
+                  "toProperty": "x"
+               },
+               {
+                  "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
+                  "fromProperty": "Position Y",
+                  "toId": "17238273-1cd5-f8ed-fe05-2ef661211894",
+                  "toProperty": "y"
+               },
+               {
+                  "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
+                  "fromProperty": "Size",
+                  "toId": "b5cb4d3a-8044-6c55-af89-8f799f87101b",
+                  "toProperty": "width"
+               },
+               {
+                  "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
+                  "fromProperty": "Name",
+                  "toId": "55cee7cb-14f0-42b3-8695-4bc7f3a759fc",
+                  "toProperty": "text"
+               },
+               {
+                  "fromId": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
+                  "fromProperty": "Info",
+                  "toId": "36b11c1d-2638-9b70-1fea-5d2098109f81",
+                  "toProperty": "text"
+               }
+            ],
+            "roots": [
+               {
+                  "id": "17238273-1cd5-f8ed-fe05-2ef661211894",
+                  "type": "Group",
+                  "version": 2,
+                  "label": "Resturant item",
+                  "x": 260,
+                  "y": 226,
+                  "parameters": {
+                     "sizeMode": "explicit",
+                     "width": {
+                        "value": 100,
+                        "unit": "px"
+                     },
+                     "height": {
+                        "value": 100,
+                        "unit": "px"
+                     }
+                  },
+                  "ports": [],
+                  "dynamicports": [],
+                  "children": [
+                     {
+                        "id": "6611500a-d385-b7f5-92bc-c909fb4a092b",
+                        "type": "Stack Layout",
+                        "x": 332,
+                        "y": 277,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                           {
+                              "id": "b5cb4d3a-8044-6c55-af89-8f799f87101b",
+                              "type": "Circle",
+                              "x": 20,
+                              "y": 46,
+                              "parameters": {
+                                 "width": {
+                                    "value": 100,
+                                    "unit": "px"
+                                 },
+                                 "color": "#f339ba"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "55cee7cb-14f0-42b3-8695-4bc7f3a759fc",
+                              "type": "Text",
+                              "version": 2,
+                              "x": 322,
+                              "y": 474,
+                              "parameters": {
+                                 "alignY": "bottom",
+                                 "color": "#1d1d1d",
+                                 "y": 0,
+                                 "sizeMode": "childSize",
+                                 "alignX": "center"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "36b11c1d-2638-9b70-1fea-5d2098109f81",
+                              "type": "Text",
+                              "version": 2,
+                              "x": 20,
+                              "y": 210,
+                              "parameters": {
+                                 "alignX": "center",
+                                 "alignY": "bottom",
+                                 "color": "#686768"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "id": "09390b18-2ce7-add7-0c7e-df7619a0ea66",
+                  "type": "Component Inputs",
+                  "x": 49,
+                  "y": 255,
+                  "parameters": {},
+                  "ports": [
+                     {
+                        "name": "Position X",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 0
+                     },
+                     {
+                        "name": "Position Y",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 1
+                     },
+                     {
+                        "name": "Name",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 2
+                     },
+                     {
+                        "name": "Info",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 3
+                     },
+                     {
+                        "name": "Size",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 4
+                     }
+                  ],
+                  "dynamicports": [],
+                  "children": []
                }
             ]
          }
@@ -58,6 +469,6 @@
       "fillMode": "aspectFit"
    },
    "rootNodeId": "2d3ccd33-f1ef-2dc5-3e1a-ca9d61cd222b",
-   "thumbnailURI": "data:image/png;base64,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Z7y+j9f5hbaE2TuLl4SmTSt+zpK/FXoOkp4ZNWpkuPWWcdXWJT8ozX8OUuiZhwVwnRTEEowZCHybCdTqJ8i3OTjHBgELAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wCwEEsVBiRpYAgshWT3ALAQSxUGJGlgCCyFZPcAsBBLFQYkaWAILIVk9wC4H/Ag28jpPC4BEhAAAAAElFTkSuQmCC",
+   "thumbnailURI": "data:image/png;base64,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",
    "version": "1"
 }
