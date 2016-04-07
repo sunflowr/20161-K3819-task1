@@ -55,7 +55,7 @@
                                         "id": "788bb7c7-5fe5-25bf-d3b5-959a13b0946a",
                                         "type": "/Map",
                                         "x": 20,
-                                        "y": 46,
+                                        "y": 82,
                                         "parameters": {},
                                         "ports": [],
                                         "dynamicports": [],
@@ -1574,7 +1574,7 @@
                         "x": -282.9026543540038,
                         "y": 648.6379188514985,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        label: \"string\",\n        flag: \"boolean\"\n    },\n    outputs: {\n        fish: \"boolean\",\n        italian: \"boolean\",\n        vegetarian: \"boolean\"\n    },\n    setup: function(inputs, outputs) {\n        \n    },\n    run: function(inputs, outputs) {\n        if(inputs.label == \"FISH\") {\n            outputs.fish = inputs.flag;\n        }\n        if(inputs.label == \"ITALIAN\") {\n            outputs.italian = inputs.flag;\n        }\n        if(inputs.label == \"VEGETARIAN\") {\n            outputs.vegetarian = inputs.flag;\n        }\n/*    if(inputs.flag == false){\n        outputs.fish = true; //0 = visible, 1 = invisible\n    } \n    else if(inputs.flag == true){\n        outputs.vegetarian = true;\n    }\n    else{\n        outputs.italian = true;\n    }*/\n // SO INPUT FLAG (FROM RECEIVER) IS NEITHER 0 NOR 1 ! HOW CAN IT BE POSSIBLE ?\n\n    }\n});",
+                            "code": "define({\n    inputs: {\n        label: \"string\",\n        flag: \"boolean\"\n    },\n    outputs: {\n        fish: \"boolean\",\n        italian: \"boolean\",\n        vegetarian: \"boolean\"\n    },\n    setup: function(inputs, outputs) {\n        \n    },\n    run: function(inputs, outputs) {\n    if(inputs.flag == 0){\n        outputs.fish = 1; //0 = visible, 1 = invisible\n    } \n    else if(inputs.flag == 1){\n        outputs.vegetarian = 1;\n    }\n    else{\n        outputs.italian = 1;\n    }\n // SO INPUT FLAG (FROM RECEIVER) IS NEITHER 0 NOR 1 ! HOW CAN IT BE POSSIBLE ?\n\n    }\n});",
                             "useExternalFile": "no",
                             "flag": false
                         },
@@ -2436,8 +2436,8 @@
                                                 "id": "4aabc390-4a5a-16dd-c7fa-24139ad99dca",
                                                 "type": "/Menu item",
                                                 "label": "Fish",
-                                                "x": 20,
-                                                "y": 61,
+                                                "x": 465.5546988409635,
+                                                "y": 204.4402049269342,
                                                 "parameters": {
                                                     "label": "FISH"
                                                 },
@@ -2450,7 +2450,7 @@
                                                 "type": "/Menu item",
                                                 "label": "Italian",
                                                 "x": 20,
-                                                "y": 122,
+                                                "y": 61,
                                                 "parameters": {
                                                     "label": "ITALIAN"
                                                 },
@@ -2759,15 +2759,15 @@
                     },
                     {
                         "fromId": "d9671bdf-938b-f99f-f5a2-d844d2db914c",
-                        "fromProperty": "flag",
-                        "toId": "1ebbb436-382d-166c-99b8-378b6ec72f69",
-                        "toProperty": "flag"
+                        "fromProperty": "label",
+                        "toId": "0f003c4e-7236-442d-c991-14a733bc5ced",
+                        "toProperty": "label"
                     },
                     {
                         "fromId": "d9671bdf-938b-f99f-f5a2-d844d2db914c",
-                        "fromProperty": "label",
-                        "toId": "1ebbb436-382d-166c-99b8-378b6ec72f69",
-                        "toProperty": "label"
+                        "fromProperty": "flag",
+                        "toId": "0f003c4e-7236-442d-c991-14a733bc5ced",
+                        "toProperty": "flag"
                     }
                 ],
                 "roots": [
@@ -2895,12 +2895,43 @@
                         "children": []
                     },
                     {
+                        "id": "0f003c4e-7236-442d-c991-14a733bc5ced",
+                        "type": "Event Sender",
+                        "x": 310.9009136444662,
+                        "y": 415.95510995691063,
+                        "parameters": {
+                            "channelName": "Filter Switch"
+                        },
+                        "ports": [
+                            {
+                                "name": "flag",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "index": 2
+                            },
+                            {
+                                "name": "label",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "index": 3
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
                         "id": "d9671bdf-938b-f99f-f5a2-d844d2db914c",
                         "type": "Javascript2",
                         "x": 42.36271041129709,
                         "y": 420.9824284269649,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        flag: \"boolean\",\n        label: \"string\"\n    },\n    outputs: {\n        flag: \"boolean\",\n        label: \"string\",\n    },\n    setup: function(inputs, outputs) {\n        outputs.label = '';\n    },\n    run: function(inputs, outputs) {\n        outputs.flag = inputs.flag;\n        if(outputs.flag == true) //input flag 1 : visible, 0 : invisible\n            outputs.label = inputs.label;\n        \n        // Send event.\n        Noodl.eventEmitter.emit(\"Filter Switch\", {\n            flag: outputs.flag,\n            label: outputs.label\n        });\n    }\n});"
+                            "code": "define({\n    inputs: {\n        flag: \"boolean\",\n        label: \"string\"\n    },\n    outputs: {\n        flag: \"boolean\",\n        label: \"string\"\n    },\n    setup: function(inputs, outputs) {\n        outputs.label = '';\n    },\n    run: function(inputs, outputs) {\n        outputs.flag = inputs.flag;\n        if(outputs.flag == 0) //input flag 1 : visible, 0 : invisible\n            outputs.label = inputs.label;\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -2937,37 +2968,6 @@
                                 "index": 5
                             }
                         ],
-                        "children": []
-                    },
-                    {
-                        "id": "1ebbb436-382d-166c-99b8-378b6ec72f69",
-                        "type": "Event Sender",
-                        "x": 258.87321723311686,
-                        "y": 404.4857587157766,
-                        "parameters": {
-                            "channelName": "Filter Switch"
-                        },
-                        "ports": [
-                            {
-                                "name": "flag",
-                                "plug": "input",
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionOnly": true
-                                },
-                                "index": 2
-                            },
-                            {
-                                "name": "label",
-                                "plug": "input",
-                                "type": {
-                                    "name": "*",
-                                    "allowConnectionOnly": true
-                                },
-                                "index": 3
-                            }
-                        ],
-                        "dynamicports": [],
                         "children": []
                     }
                 ]
