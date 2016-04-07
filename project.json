@@ -10,6 +10,12 @@
                   "fromProperty": "outputValue",
                   "toId": "57e01c18-03e3-49c8-9ef5-1b272918c61d",
                   "toProperty": "sendEvent"
+               },
+               {
+                  "fromId": "690713c8-90d1-7bcf-5a3b-6de586980238",
+                  "fromProperty": "currentPageTitle",
+                  "toId": "b4bf802b-e5e9-3a98-6211-e877c001b376",
+                  "toProperty": "Title"
                }
             ],
             "roots": [
@@ -74,32 +80,28 @@
                         "type": {
                            "name": "number"
                         },
-                        "plug": "input",
-                        "index": 2
+                        "plug": "input"
                      },
                      {
                         "name": "inputImage",
                         "type": {
                            "name": "reference"
                         },
-                        "plug": "input",
-                        "index": 3
+                        "plug": "input"
                      },
                      {
                         "name": "outputValue",
                         "type": {
                            "name": "number"
                         },
-                        "plug": "output",
-                        "index": 4
+                        "plug": "output"
                      },
                      {
                         "name": "outputImage",
                         "type": {
                            "name": "image"
                         },
-                        "plug": "output",
-                        "index": 5
+                        "plug": "output"
                      }
                   ],
                   "children": []
@@ -131,10 +133,28 @@
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "output",
-                        "index": 2
+                        "plug": "output"
                      }
                   ],
+                  "children": []
+               },
+               {
+                  "id": "b4bf802b-e5e9-3a98-6211-e877c001b376",
+                  "type": "Component Outputs",
+                  "x": 394.2619938361889,
+                  "y": 547.445329099346,
+                  "parameters": {},
+                  "ports": [
+                     {
+                        "name": "Title",
+                        "plug": "input",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 0
+                     }
+                  ],
+                  "dynamicports": [],
                   "children": []
                }
             ]
@@ -629,32 +649,28 @@
                         "type": {
                            "name": "string"
                         },
-                        "plug": "input",
-                        "index": 2
+                        "plug": "input"
                      },
                      {
                         "name": "filterSettings",
                         "type": {
                            "name": "string"
                         },
-                        "plug": "input",
-                        "index": 3
+                        "plug": "input"
                      },
                      {
                         "name": "filterSwitch",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "input",
-                        "index": 4
+                        "plug": "input"
                      },
                      {
                         "name": "visible",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "output",
-                        "index": 5
+                        "plug": "output"
                      }
                   ],
                   "children": []
@@ -710,40 +726,35 @@
                         "type": {
                            "name": "number"
                         },
-                        "plug": "input",
-                        "index": 2
+                        "plug": "input"
                      },
                      {
                         "name": "resturant",
                         "type": {
                            "name": "number"
                         },
-                        "plug": "input",
-                        "index": 3
+                        "plug": "input"
                      },
                      {
                         "name": "normalColor",
                         "type": {
                            "name": "color"
                         },
-                        "plug": "input",
-                        "index": 4
+                        "plug": "input"
                      },
                      {
                         "name": "selectedColor",
                         "type": {
                            "name": "color"
                         },
-                        "plug": "input",
-                        "index": 5
+                        "plug": "input"
                      },
                      {
                         "name": "color",
                         "type": {
                            "name": "color"
                         },
-                        "plug": "output",
-                        "index": 6
+                        "plug": "output"
                      }
                   ],
                   "children": []
@@ -826,12 +837,6 @@
                   "fromProperty": "switchedToOn",
                   "toId": "597a3812-2ec0-4462-fe72-7bc9f5dd001d",
                   "toProperty": "replayToEnd"
-               },
-               {
-                  "fromId": "137876d4-6b3f-7f12-3076-9fa1d7069653",
-                  "fromProperty": "eventReceived",
-                  "toId": "727245d7-696a-d676-e316-bac18b180608",
-                  "toProperty": "on"
                },
                {
                   "fromId": "57644dca-cad7-c9ad-f72d-9f633b816e8c",
@@ -964,6 +969,24 @@
                   "fromProperty": "touch.tap",
                   "toId": "ff0002cc-2156-68e5-f632-fc643fd1fe16",
                   "toProperty": "navigate"
+               },
+               {
+                  "fromId": "137876d4-6b3f-7f12-3076-9fa1d7069653",
+                  "fromProperty": "eventReceived",
+                  "toId": "727245d7-696a-d676-e316-bac18b180608",
+                  "toProperty": "on"
+               },
+               {
+                  "fromId": "137876d4-6b3f-7f12-3076-9fa1d7069653",
+                  "fromProperty": "Name",
+                  "toId": "9b9c7a09-7a8f-4e79-90c7-ba849bf500d6",
+                  "toProperty": "Name"
+               },
+               {
+                  "fromId": "52986fa2-ac3e-ba86-9f8f-37b113c825af",
+                  "fromProperty": "touch.tap",
+                  "toId": "9b9c7a09-7a8f-4e79-90c7-ba849bf500d6",
+                  "toProperty": "sendEvent"
                }
             ],
             "roots": [
@@ -1316,12 +1339,12 @@
                               "type": "Text",
                               "version": 2,
                               "x": 20,
-                              "y": 766,
+                              "y": 786,
                               "parameters": {
                                  "alignX": "right",
                                  "text": "Distance",
                                  "x": -10,
-                                 "y": 650,
+                                 "y": 550,
                                  "fontSize": 50,
                                  "color": "#3770ff",
                                  "alignY": "top"
@@ -1490,48 +1513,42 @@
                         "type": {
                            "name": "number"
                         },
-                        "plug": "input",
-                        "index": 2
+                        "plug": "input"
                      },
                      {
                         "name": "positionY",
                         "type": {
                            "name": "number"
                         },
-                        "plug": "input",
-                        "index": 3
+                        "plug": "input"
                      },
                      {
                         "name": "resturantPositionX",
                         "type": {
                            "name": "number"
                         },
-                        "plug": "input",
-                        "index": 4
+                        "plug": "input"
                      },
                      {
                         "name": "resturantPositionY",
                         "type": {
                            "name": "number"
                         },
-                        "plug": "input",
-                        "index": 5
+                        "plug": "input"
                      },
                      {
                         "name": "scale",
                         "type": {
                            "name": "number"
                         },
-                        "plug": "input",
-                        "index": 6
+                        "plug": "input"
                      },
                      {
                         "name": "distanceText",
                         "type": {
                            "name": "string"
                         },
-                        "plug": "output",
-                        "index": 7
+                        "plug": "output"
                      }
                   ],
                   "children": []
@@ -1587,40 +1604,35 @@
                         "type": {
                            "name": "string"
                         },
-                        "plug": "input",
-                        "index": 2
+                        "plug": "input"
                      },
                      {
                         "name": "flag",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "input",
-                        "index": 3
+                        "plug": "input"
                      },
                      {
                         "name": "fish",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "output",
-                        "index": 4
+                        "plug": "output"
                      },
                      {
                         "name": "italian",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "output",
-                        "index": 5
+                        "plug": "output"
                      },
                      {
                         "name": "vegetarian",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "output",
-                        "index": 6
+                        "plug": "output"
                      }
                   ],
                   "children": []
@@ -1653,12 +1665,34 @@
                {
                   "id": "ff0002cc-2156-68e5-f632-fc643fd1fe16",
                   "type": "Page Navigation",
-                  "x": 257.8863769914613,
-                  "y": 1165.2606407803596,
+                  "x": 275.1188431487113,
+                  "y": 1213.265367932699,
                   "parameters": {
                      "destination": "/Resturant Page"
                   },
                   "ports": [],
+                  "dynamicports": [],
+                  "children": []
+               },
+               {
+                  "id": "9b9c7a09-7a8f-4e79-90c7-ba849bf500d6",
+                  "type": "Event Sender",
+                  "x": 457.998867741723,
+                  "y": 1103.590086375968,
+                  "parameters": {
+                     "channelName": "Show Resturant Page"
+                  },
+                  "ports": [
+                     {
+                        "name": "Name",
+                        "plug": "input",
+                        "type": {
+                           "name": "*",
+                           "allowConnectionOnly": true
+                        },
+                        "index": 2
+                     }
+                  ],
                   "dynamicports": [],
                   "children": []
                }
@@ -1805,32 +1839,28 @@
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "input",
-                        "index": 2
+                        "plug": "input"
                      },
                      {
                         "name": "italian",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "input",
-                        "index": 3
+                        "plug": "input"
                      },
                      {
                         "name": "vegetarian",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "input",
-                        "index": 4
+                        "plug": "input"
                      },
                      {
                         "name": "filter",
                         "type": {
                            "name": "string"
                         },
-                        "plug": "output",
-                        "index": 5
+                        "plug": "output"
                      }
                   ],
                   "children": []
@@ -1981,32 +2011,28 @@
                         "type": {
                            "name": "string"
                         },
-                        "plug": "input",
-                        "index": 2
+                        "plug": "input"
                      },
                      {
                         "name": "fish",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "output",
-                        "index": 3
+                        "plug": "output"
                      },
                      {
                         "name": "italian",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "output",
-                        "index": 4
+                        "plug": "output"
                      },
                      {
                         "name": "vegetarian",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "output",
-                        "index": 5
+                        "plug": "output"
                      }
                   ],
                   "children": []
@@ -2398,6 +2424,12 @@
                   "fromProperty": "eventReceived",
                   "toId": "a2447949-8c76-183e-9a46-8fc457a9765c",
                   "toProperty": "to-Closed"
+               },
+               {
+                  "fromId": "d24c87f5-a516-6f52-5f6c-bd97cdb021c0",
+                  "fromProperty": "Title",
+                  "toId": "e39ca2c0-1442-6200-770b-a6ac87e82316",
+                  "toProperty": "Title"
                }
             ],
             "roots": [
@@ -2522,8 +2554,8 @@
                      {
                         "id": "e39ca2c0-1442-6200-770b-a6ac87e82316",
                         "type": "/Title",
-                        "x": 413.671353662408,
-                        "y": 397.55997603587616,
+                        "x": 20,
+                        "y": 611,
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
@@ -2965,32 +2997,28 @@
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "input",
-                        "index": 2
+                        "plug": "input"
                      },
                      {
                         "name": "label",
                         "type": {
                            "name": "string"
                         },
-                        "plug": "input",
-                        "index": 3
+                        "plug": "input"
                      },
                      {
                         "name": "flag",
                         "type": {
                            "name": "boolean"
                         },
-                        "plug": "output",
-                        "index": 4
+                        "plug": "output"
                      },
                      {
                         "name": "label",
                         "type": {
                            "name": "string"
                         },
-                        "plug": "output",
-                        "index": 5
+                        "plug": "output"
                      }
                   ],
                   "children": []
@@ -3038,6 +3066,12 @@
                   "fromProperty": "touch.tap",
                   "toId": "3033f1ac-ee65-e2c3-1bc9-eb23aa53bc45",
                   "toProperty": "sendEvent"
+               },
+               {
+                  "fromId": "7c677f30-57af-e72e-f780-32bc41da7751",
+                  "fromProperty": "Title",
+                  "toId": "44920297-b1e5-b239-6b09-263a9ab363b7",
+                  "toProperty": "text"
                }
             ],
             "roots": [
@@ -3135,12 +3169,31 @@
                {
                   "id": "3033f1ac-ee65-e2c3-1bc9-eb23aa53bc45",
                   "type": "Event Sender",
-                  "x": 108,
-                  "y": 202,
+                  "x": 58,
+                  "y": 229,
                   "parameters": {
                      "channelName": "Toggle Menu"
                   },
                   "ports": [],
+                  "dynamicports": [],
+                  "children": []
+               },
+               {
+                  "id": "7c677f30-57af-e72e-f780-32bc41da7751",
+                  "type": "Component Inputs",
+                  "x": 29.5,
+                  "y": 103,
+                  "parameters": {},
+                  "ports": [
+                     {
+                        "name": "Title",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 0
+                     }
+                  ],
                   "dynamicports": [],
                   "children": []
                }
@@ -3150,7 +3203,20 @@
       {
          "name": "/Resturant Page",
          "graph": {
-            "connections": [],
+            "connections": [
+               {
+                  "fromId": "f5514448-c55d-72a6-070b-2c5990cef8ff",
+                  "fromProperty": "Name",
+                  "toId": "ca0a94e1-9a69-0053-ea9b-1e6d81a045be",
+                  "toProperty": "text"
+               },
+               {
+                  "fromId": "f5514448-c55d-72a6-070b-2c5990cef8ff",
+                  "fromProperty": "Name",
+                  "toId": "a0c01f36-391f-7859-4afd-f1a7faa4d14f",
+                  "toProperty": "text"
+               }
+            ],
             "roots": [
                {
                   "id": "e161bfd1-31e4-b545-303a-842d0523306e",
@@ -3179,7 +3245,7 @@
                         "version": 2,
                         "label": "Resturant photo",
                         "x": 20,
-                        "y": 92,
+                        "y": 128,
                         "parameters": {
                            "sizeMode": "explicit",
                            "width": {
@@ -3302,7 +3368,7 @@
                               "type": "/Resturant Info Item",
                               "label": "Menu",
                               "x": 20,
-                              "y": 107,
+                              "y": 168,
                               "parameters": {
                                  "Icon": "Assets/icons/drink2.png",
                                  "Name": "Menu"
@@ -3340,85 +3406,27 @@
                                     "children": []
                                  },
                                  {
-                                    "id": "d0bbb993-4105-ace2-7c5d-46f22fd49334",
-                                    "type": "Stack Layout",
+                                    "id": "91bfac34-4639-aa5f-1a52-25b65ab1b475",
+                                    "type": "Group",
+                                    "version": 2,
                                     "x": 20,
                                     "y": 122,
                                     "parameters": {
-                                       "orientation": "horizontal",
-                                       "itemSpacing": 10,
+                                       "y": 50,
                                        "alignX": "center",
-                                       "sizeMode": "childSize",
-                                       "y": 50
+                                       "sizeMode": "childSize"
                                     },
                                     "ports": [],
                                     "dynamicports": [],
                                     "children": [
                                        {
-                                          "id": "a491b73e-be53-1c61-2579-987dcb1378d6",
-                                          "type": "Image",
-                                          "version": 2,
-                                          "label": "1",
+                                          "id": "65418c2b-3a5d-8c28-faef-f07b6bb24ac8",
+                                          "type": "/RatingStars",
                                           "x": 20,
                                           "y": 46,
                                           "parameters": {
-                                             "image": "Assets/icons/star-full.png"
-                                          },
-                                          "ports": [],
-                                          "dynamicports": [],
-                                          "children": []
-                                       },
-                                       {
-                                          "id": "6abc2d24-0461-ffde-5785-748a9d66401a",
-                                          "type": "Image",
-                                          "version": 2,
-                                          "label": "2",
-                                          "x": 20,
-                                          "y": 107,
-                                          "parameters": {
-                                             "image": "Assets/icons/star-full.png"
-                                          },
-                                          "ports": [],
-                                          "dynamicports": [],
-                                          "children": []
-                                       },
-                                       {
-                                          "id": "26e18c5f-c327-aeb9-4f18-e555fc4d71b1",
-                                          "type": "Image",
-                                          "version": 2,
-                                          "label": "3",
-                                          "x": 20,
-                                          "y": 168,
-                                          "parameters": {
-                                             "image": "Assets/icons/star-full.png"
-                                          },
-                                          "ports": [],
-                                          "dynamicports": [],
-                                          "children": []
-                                       },
-                                       {
-                                          "id": "856794a7-e34e-afc9-56cf-99f7c0d657a1",
-                                          "type": "Image",
-                                          "version": 2,
-                                          "label": "4",
-                                          "x": 20,
-                                          "y": 229,
-                                          "parameters": {
-                                             "image": "Assets/icons/star.png"
-                                          },
-                                          "ports": [],
-                                          "dynamicports": [],
-                                          "children": []
-                                       },
-                                       {
-                                          "id": "53a6bd91-d3ab-970d-ec0e-d1ba20725152",
-                                          "type": "Image",
-                                          "version": 2,
-                                          "label": "5",
-                                          "x": 20,
-                                          "y": 290,
-                                          "parameters": {
-                                             "image": "Assets/icons/star.png"
+                                             "Rating": 0,
+                                             "Scale": 1
                                           },
                                           "ports": [],
                                           "dynamicports": [],
@@ -3431,54 +3439,11 @@
                         ]
                      },
                      {
-                        "id": "8e61bfe8-d258-28d7-c31e-2d9230bd6d30",
-                        "type": "Scroll View",
-                        "label": "Resturant Info",
-                        "x": 20,
-                        "y": 443,
-                        "parameters": {
-                           "y": 400,
-                           "x": 0,
-                           "alignX": "center",
-                           "width": {
-                              "value": 96,
-                              "unit": "%"
-                           },
-                           "clip": true,
-                           "height": {
-                              "value": 33,
-                              "unit": "%"
-                           },
-                           "visible": false
-                        },
-                        "ports": [],
-                        "dynamicports": [],
-                        "children": [
-                           {
-                              "id": "992c40fc-e8cd-f430-b98d-d3daa47c9152",
-                              "type": "Text",
-                              "version": 2,
-                              "x": 20,
-                              "y": 61,
-                              "parameters": {
-                                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra dui id fermentum consectetur. Fusce quis diam eget orci placerat consequat semper eu nisi. Maecenas lacinia dolor magna, pellentesque tincidunt magna feugiat eu. Morbi eget augue ante. Donec iaculis lorem eu tellus pellentesque pharetra. Aliquam ac consectetur augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam venenatis sagittis libero, ut tempus mi luctus quis. Maecenas ultrices, nibh ut ultrices aliquam, ex magna consequat lorem, eu commodo mi justo et purus. Nam eget fermentum arcu. Integer vitae ultrices nunc. Fusce leo nisi, pellentesque in pretium eu, mattis vel lectus. Aliquam non sollicitudin nisl, nec hendrerit ex.",
-                                 "color": "#000000",
-                                 "sizeMode": "explicit",
-                                 "fontSize": 55,
-                                 "clipText": true
-                              },
-                              "ports": [],
-                              "dynamicports": [],
-                              "children": []
-                           }
-                        ]
-                     },
-                     {
                         "id": "be5489fa-d70a-3da2-a6e2-79a6803dcffb",
                         "type": "Text",
                         "version": 2,
                         "x": 20,
-                        "y": 397,
+                        "y": 1265,
                         "parameters": {
                            "text": "Ratings",
                            "color": "#000000",
@@ -3501,7 +3466,7 @@
                         "type": "Scroll View",
                         "label": "Resturant Ratings",
                         "x": 20,
-                        "y": 458,
+                        "y": 1326,
                         "parameters": {
                            "y": 1150,
                            "x": 0,
@@ -3514,23 +3479,59 @@
                            "height": {
                               "value": 33,
                               "unit": "%"
-                           }
+                           },
+                           "sizeMode": "explicit"
                         },
                         "ports": [],
                         "dynamicports": [],
                         "children": [
                            {
-                              "id": "27dcae81-a2ff-20a9-6b05-2e26bef60627",
-                              "type": "Text",
-                              "version": 2,
+                              "id": "b5bd2c9c-83eb-0b98-87d6-56a5ce2bb84f",
+                              "type": "/Resturant Rating",
                               "x": 20,
                               "y": 61,
                               "parameters": {
-                                 "text": "Good food! :)",
-                                 "color": "#000000",
-                                 "sizeMode": "explicit",
-                                 "fontSize": 55,
-                                 "clipText": true
+                                 "Rating": 5,
+                                 "Text": "Good Food! :)"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "9adee88c-8ce9-b343-ce44-028acb1c0a93",
+                              "type": "/Resturant Rating",
+                              "x": 20,
+                              "y": 107,
+                              "parameters": {
+                                 "Rating": 1,
+                                 "Text": "Bad Food! :("
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "5981f143-0b91-de1c-b049-4938c567f719",
+                              "type": "/Resturant Rating",
+                              "x": 20,
+                              "y": 153,
+                              "parameters": {
+                                 "Rating": 1,
+                                 "Text": "Not Food! :O"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "8864b5a7-4ebb-575a-7c5c-aebe2a77ca82",
+                              "type": "/Resturant Rating",
+                              "x": 20,
+                              "y": 199,
+                              "parameters": {
+                                 "Rating": 3,
+                                 "Text": "Ok Food! :)"
                               },
                               "ports": [],
                               "dynamicports": [],
@@ -3543,11 +3544,11 @@
                {
                   "id": "b994575a-8867-26f5-a76c-3e6b4d528d13",
                   "type": "Javascript2",
-                  "label": "Ratings Script",
-                  "x": 529.8954906934251,
-                  "y": 986.7063280046502,
+                  "label": "Show Ratings Script",
+                  "x": 602.8954906934251,
+                  "y": 1204.7063280046505,
                   "parameters": {
-                     "code": "define({\n    inputs: {\n        rating: \"number\",\n        starImage: \"image\",\n        starImageFull: \"image\"\n    },\n    outputs: {\n        image1: \"image\",\n        image2: \"image\",\n        image3: \"image\",\n        image4: \"image\",\n        image5: \"image\"\n    },\n    setup: function(inputs, outputs) {\n        outputs.image1visible = false;\n        outputs.image2visible = false;\n        outputs.image3visible = false;\n        outputs.image4visible = false;\n        outputs.image5visible = false;\n    },\n    run: function(inputs, outputs) {\n        switch(inputs.rating) {\n        case 1:\n            outputs.image1 = starImage;\n            outputs.image2 = starImage;\n            outputs.image3 = starImage;\n            outputs.image4 = starImage;\n            outputs.image5 = starImage;\n            break;\n\n        case 2:\n            outputs.image1 = starImage;\n            outputs.image2 = starImage;\n            outputs.image3 = starImage;\n            outputs.image4 = starImage;\n            outputs.image5 = starImage;\n            break;\n\n        case 3:\n            outputs.image1 = starImage;\n            outputs.image2 = starImage;\n            outputs.image3 = starImage;\n            outputs.image4 = starImage;\n            outputs.image5 = starImage;\n            break;\n\n        case 4:\n            outputs.image1 = starImage;\n            outputs.image2 = starImage;\n            outputs.image3 = starImage;\n            outputs.image4 = starImage;\n            outputs.image5 = starImage;\n            break;\n\n        case 5:\n            outputs.image1visible = false;\n            outputs.image2visible = false;\n            outputs.image3visible = false;\n            outputs.image4visible = false;\n            outputs.image5visible = false;\n            break;\n            \n        default:\n            break;\n        }\n\n    }\n});",
+                     "code": "define({\n    inputs: {\n        rating: \"number\",\n        starImage: \"image\",\n        starImageFull: \"image\"\n    },\n    outputs: {\n        image1: \"image\",\n        image2: \"image\",\n        image3: \"image\",\n        image4: \"image\",\n        image5: \"image\"\n    },\n    setup: function(inputs, outputs) {\n    },\n    run: function(inputs, outputs) {\n        switch(inputs.rating) {\n        case 1:\n            outputs.image1 = starImageFull;\n            outputs.image2 = starImage;\n            outputs.image3 = starImage;\n            outputs.image4 = starImage;\n            outputs.image5 = starImage;\n            break;\n\n        case 2:\n            outputs.image1 = starImageFull;\n            outputs.image2 = starImageFull;\n            outputs.image3 = starImage;\n            outputs.image4 = starImage;\n            outputs.image5 = starImage;\n            break;\n\n        case 3:\n            outputs.image1 = starImageFull;\n            outputs.image2 = starImageFull;\n            outputs.image3 = starImageFull;\n            outputs.image4 = starImage;\n            outputs.image5 = starImage;\n            break;\n\n        case 4:\n            outputs.image1 = starImageFull;\n            outputs.image2 = starImageFull;\n            outputs.image3 = starImageFull;\n            outputs.image4 = starImageFull;\n            outputs.image5 = starImage;\n            break;\n\n        case 5:\n            outputs.image1 = starImageFull;\n            outputs.image2 = starImageFull;\n            outputs.image3 = starImageFull;\n            outputs.image4 = starImageFull;\n            outputs.image5 = starImageFull;\n            break;\n            \n        default:\n            break;\n        }\n\n    }\n});",
                      "starImage": "Assets/icons/star.png",
                      "starImageFull": "Assets/icons/star-full.png"
                   },
@@ -3558,66 +3559,82 @@
                         "type": {
                            "name": "number"
                         },
-                        "plug": "input",
-                        "index": 2
+                        "plug": "input"
                      },
                      {
                         "name": "starImage",
                         "type": {
                            "name": "image"
                         },
-                        "plug": "input",
-                        "index": 3
+                        "plug": "input"
                      },
                      {
                         "name": "starImageFull",
                         "type": {
                            "name": "image"
                         },
-                        "plug": "input",
-                        "index": 4
+                        "plug": "input"
                      },
                      {
                         "name": "image1",
                         "type": {
                            "name": "image"
                         },
-                        "plug": "output",
-                        "index": 5
+                        "plug": "output"
                      },
                      {
                         "name": "image2",
                         "type": {
                            "name": "image"
                         },
-                        "plug": "output",
-                        "index": 6
+                        "plug": "output"
                      },
                      {
                         "name": "image3",
                         "type": {
                            "name": "image"
                         },
-                        "plug": "output",
-                        "index": 7
+                        "plug": "output"
                      },
                      {
                         "name": "image4",
                         "type": {
                            "name": "image"
                         },
-                        "plug": "output",
-                        "index": 8
+                        "plug": "output"
                      },
                      {
                         "name": "image5",
                         "type": {
                            "name": "image"
                         },
-                        "plug": "output",
-                        "index": 9
+                        "plug": "output"
                      }
                   ],
+                  "children": []
+               },
+               {
+                  "id": "f5514448-c55d-72a6-070b-2c5990cef8ff",
+                  "type": "Event Receiver",
+                  "x": -24.772895548650006,
+                  "y": 387.9582580510031,
+                  "parameters": {
+                     "channelName": "Show Resturant Page"
+                  },
+                  "ports": [],
+                  "dynamicports": [],
+                  "children": []
+               },
+               {
+                  "id": "4fc0e167-ad70-ca9d-7111-992d8dd68e96",
+                  "type": "String",
+                  "x": 17.033852569738514,
+                  "y": 852.5051951311418,
+                  "parameters": {
+                     "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra dui id fermentum consectetur. Fusce quis diam eget orci placerat consequat semper eu nisi. Maecenas lacinia dolor magna, pellentesque tincidunt magna feugiat eu. Morbi eget augue ante. Donec iaculis lorem eu tellus pellentesque pharetra. Aliquam ac consectetur augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam venenatis sagittis libero, ut tempus mi luctus quis. Maecenas ultrices, nibh ut ultrices aliquam, ex magna consequat lorem, eu commodo mi justo et purus. Nam eget fermentum arcu. Integer vitae ultrices nunc. Fusce leo nisi, pellentesque in pretium eu, mattis vel lectus. Aliquam non sollicitudin nisl, nec hendrerit ex."
+                  },
+                  "ports": [],
+                  "dynamicports": [],
                   "children": []
                }
             ]
@@ -3666,7 +3683,6 @@
                         "x": 20,
                         "y": 61,
                         "parameters": {
-                           "image": "Assets/icons/Feedbin-Favicon-search-light.svg.png",
                            "sizeMode": "explicit",
                            "fillMode": "aspectFit",
                            "width": {
@@ -3677,7 +3693,7 @@
                               "value": 80,
                               "unit": "px"
                            },
-                           "color": "#0433ff",
+                           "color": "#000000",
                            "blendMode": "alpha",
                            "alignY": "center",
                            "visible": true,
@@ -3695,7 +3711,7 @@
                         "x": 20,
                         "y": 158,
                         "parameters": {
-                           "color": "#000000",
+                           "color": "#0433ff",
                            "fontSize": 55,
                            "text": "Name",
                            "x": 130,
@@ -3729,6 +3745,414 @@
                            "name": "*"
                         },
                         "index": 1
+                     }
+                  ],
+                  "dynamicports": [],
+                  "children": []
+               }
+            ]
+         }
+      },
+      {
+         "name": "/Resturant Rating",
+         "graph": {
+            "connections": [
+               {
+                  "fromId": "c6060e5f-fdc0-0343-7afe-cbab82fa9d46",
+                  "fromProperty": "Text",
+                  "toId": "94c40133-a4ed-fb88-e130-06420b00bc4b",
+                  "toProperty": "text"
+               },
+               {
+                  "fromId": "c6060e5f-fdc0-0343-7afe-cbab82fa9d46",
+                  "fromProperty": "Rating",
+                  "toId": "d3d99660-216e-2c3e-f5c9-ddbbc5fffd96",
+                  "toProperty": "Rating"
+               }
+            ],
+            "roots": [
+               {
+                  "id": "d38ddca4-5c91-4bf5-67cf-030260c85138",
+                  "type": "Group",
+                  "version": 2,
+                  "label": "Resturant Rating",
+                  "x": 85,
+                  "y": 327,
+                  "parameters": {
+                     "sizeMode": "childSize",
+                     "height": {
+                        "value": 100,
+                        "unit": "px"
+                     },
+                     "padding": 0
+                  },
+                  "ports": [],
+                  "dynamicports": [],
+                  "children": [
+                     {
+                        "id": "e1f72c94-35fe-f1c5-fb56-4d2de69cf269",
+                        "type": "Rectangle",
+                        "x": 20,
+                        "y": 61,
+                        "parameters": {
+                           "color": "#f1f2f4"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                     },
+                     {
+                        "id": "9deb43e2-62d2-175b-1f38-70c9fe78d01c",
+                        "type": "Stack Layout",
+                        "x": 20,
+                        "y": 107,
+                        "parameters": {
+                           "sizeMode": "childSize"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                           {
+                              "id": "94c40133-a4ed-fb88-e130-06420b00bc4b",
+                              "type": "Text",
+                              "version": 2,
+                              "x": 20,
+                              "y": 46,
+                              "parameters": {
+                                 "color": "#000000",
+                                 "x": 0,
+                                 "y": 0,
+                                 "sizeMode": "childSize"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "129320c8-0260-5975-0fb4-eb98ae7121cc",
+                              "type": "Group",
+                              "version": 2,
+                              "x": 20,
+                              "y": 128,
+                              "parameters": {
+                                 "scaleX": 0.5,
+                                 "scaleY": 0.5,
+                                 "sizeMode": "childSize",
+                                 "x": 0,
+                                 "alignX": "left"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": [
+                                 {
+                                    "id": "d3d99660-216e-2c3e-f5c9-ddbbc5fffd96",
+                                    "type": "/RatingStars",
+                                    "x": 20,
+                                    "y": 46,
+                                    "parameters": {
+                                       "Postion X": 0,
+                                       "Position Y": 0,
+                                       "Scale": 0.5
+                                    },
+                                    "ports": [],
+                                    "dynamicports": [],
+                                    "children": []
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "id": "c6060e5f-fdc0-0343-7afe-cbab82fa9d46",
+                  "type": "Component Inputs",
+                  "x": -180,
+                  "y": 414,
+                  "parameters": {},
+                  "ports": [
+                     {
+                        "name": "Text",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 0
+                     },
+                     {
+                        "name": "Rating",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 1
+                     }
+                  ],
+                  "dynamicports": [],
+                  "children": []
+               }
+            ]
+         }
+      },
+      {
+         "name": "/RatingStars",
+         "graph": {
+            "connections": [
+               {
+                  "fromId": "40585db7-6ce6-2476-a9ad-45ad043152d3",
+                  "fromProperty": "Rating",
+                  "toId": "edfa8e1f-7a13-1ec0-2111-bea93cea04fe",
+                  "toProperty": "rating"
+               },
+               {
+                  "fromId": "edfa8e1f-7a13-1ec0-2111-bea93cea04fe",
+                  "fromProperty": "image1",
+                  "toId": "d5efd182-1d11-44f3-c204-8c424217786e",
+                  "toProperty": "image"
+               },
+               {
+                  "fromId": "edfa8e1f-7a13-1ec0-2111-bea93cea04fe",
+                  "fromProperty": "image2",
+                  "toId": "2a26fad0-8f53-f74b-9f09-57aa41c4d16e",
+                  "toProperty": "image"
+               },
+               {
+                  "fromId": "edfa8e1f-7a13-1ec0-2111-bea93cea04fe",
+                  "fromProperty": "image3",
+                  "toId": "921f512a-f7a7-2012-07ea-65e2d56c63d7",
+                  "toProperty": "image"
+               },
+               {
+                  "fromId": "edfa8e1f-7a13-1ec0-2111-bea93cea04fe",
+                  "fromProperty": "image4",
+                  "toId": "c29b82b9-2488-60f1-2930-6b28a549fb95",
+                  "toProperty": "image"
+               },
+               {
+                  "fromId": "edfa8e1f-7a13-1ec0-2111-bea93cea04fe",
+                  "fromProperty": "image5",
+                  "toId": "d72defe8-3128-7259-39b8-7f3907ebe14c",
+                  "toProperty": "image"
+               }
+            ],
+            "roots": [
+               {
+                  "id": "3c56554a-ad40-255b-1547-254692132b38",
+                  "type": "Group",
+                  "version": 2,
+                  "x": 147,
+                  "y": 233,
+                  "parameters": {
+                     "sizeMode": "childSize",
+                     "alignX": "left"
+                  },
+                  "ports": [],
+                  "dynamicports": [],
+                  "children": [
+                     {
+                        "id": "6138b94a-cd4c-a831-cbc8-22d1a9a7fb06",
+                        "type": "Stack Layout",
+                        "x": 20,
+                        "y": 102,
+                        "parameters": {
+                           "orientation": "horizontal",
+                           "itemSpacing": 10,
+                           "alignX": "left",
+                           "sizeMode": "childSize",
+                           "y": 0
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                           {
+                              "id": "d5efd182-1d11-44f3-c204-8c424217786e",
+                              "type": "Image",
+                              "version": 2,
+                              "label": "1",
+                              "x": 20,
+                              "y": 46,
+                              "parameters": {
+                                 "image": "Assets/icons/star-full.png"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "2a26fad0-8f53-f74b-9f09-57aa41c4d16e",
+                              "type": "Image",
+                              "version": 2,
+                              "label": "2",
+                              "x": 282,
+                              "y": 1171,
+                              "parameters": {
+                                 "image": "Assets/icons/star-full.png"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "921f512a-f7a7-2012-07ea-65e2d56c63d7",
+                              "type": "Image",
+                              "version": 2,
+                              "label": "3",
+                              "x": 282,
+                              "y": 1268,
+                              "parameters": {
+                                 "image": "Assets/icons/star-full.png"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "c29b82b9-2488-60f1-2930-6b28a549fb95",
+                              "type": "Image",
+                              "version": 2,
+                              "label": "4",
+                              "x": 282,
+                              "y": 1365,
+                              "parameters": {
+                                 "image": "Assets/icons/star.png"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           },
+                           {
+                              "id": "d72defe8-3128-7259-39b8-7f3907ebe14c",
+                              "type": "Image",
+                              "version": 2,
+                              "label": "5",
+                              "x": 282,
+                              "y": 1462,
+                              "parameters": {
+                                 "image": "Assets/icons/star.png"
+                              },
+                              "ports": [],
+                              "dynamicports": [],
+                              "children": []
+                           }
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "id": "40585db7-6ce6-2476-a9ad-45ad043152d3",
+                  "type": "Component Inputs",
+                  "x": 135,
+                  "y": 124,
+                  "parameters": {},
+                  "ports": [
+                     {
+                        "name": "Rating",
+                        "plug": "output",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 3
+                     }
+                  ],
+                  "dynamicports": [],
+                  "children": []
+               },
+               {
+                  "id": "edfa8e1f-7a13-1ec0-2111-bea93cea04fe",
+                  "type": "Javascript2",
+                  "label": "Show Ratings Script",
+                  "x": 467,
+                  "y": 542,
+                  "parameters": {
+                     "code": "define({\n    inputs: {\n        rating: \"number\",\n        unchecked: \"image\",\n        checked: \"image\"\n    },\n    outputs: {\n        image1: \"image\",\n        image2: \"image\",\n        image3: \"image\",\n        image4: \"image\",\n        image5: \"image\"\n    },\n    setup: function(inputs, outputs) {\n            outputs.image1 = inputs.unchecked;\n            outputs.image2 = inputs.unchecked;\n            outputs.image3 = inputs.unchecked;\n            outputs.image4 = inputs.unchecked;\n            outputs.image5 = inputs.unchecked;\n    },\n    run: function(inputs, outputs) {\n        switch(inputs.rating) {\n        case 1:\n            outputs.image1 = inputs.checked;\n            outputs.image2 = inputs.unchecked;\n            outputs.image3 = inputs.unchecked;\n            outputs.image4 = inputs.unchecked;\n            outputs.image5 = inputs.unchecked;\n            break;\n\n        case 2:\n            outputs.image1 = inputs.checked;\n            outputs.image2 = inputs.checked;\n            outputs.image3 = inputs.unchecked;\n            outputs.image4 = inputs.unchecked;\n            outputs.image5 = inputs.unchecked;\n            break;\n\n        case 3:\n            outputs.image1 = inputs.checked;\n            outputs.image2 = inputs.checked;\n            outputs.image3 = inputs.checked;\n            outputs.image4 = inputs.unchecked;\n            outputs.image5 = inputs.unchecked;\n            break;\n\n        case 4:\n            outputs.image1 = inputs.checked;\n            outputs.image2 = inputs.checked;\n            outputs.image3 = inputs.checked;\n            outputs.image4 = inputs.checked;\n            outputs.image5 = inputs.unchecked;\n            break;\n\n        case 5:\n            outputs.image1 = inputs.checked;\n            outputs.image2 = inputs.checked;\n            outputs.image3 = inputs.checked;\n            outputs.image4 = inputs.checked;\n            outputs.image5 = inputs.checked;\n            break;\n        }\n\n    }\n});",
+                     "starImage": "Assets/icons/star.png",
+                     "starImageFull": "Assets/icons/star-full.png",
+                     "unchecked": "Assets/icons/star.png",
+                     "checked": "Assets/icons/star-full.png"
+                  },
+                  "ports": [],
+                  "dynamicports": [
+                     {
+                        "name": "rating",
+                        "type": {
+                           "name": "number"
+                        },
+                        "plug": "input",
+                        "index": 2
+                     },
+                     {
+                        "name": "unchecked",
+                        "type": {
+                           "name": "image"
+                        },
+                        "plug": "input",
+                        "index": 3
+                     },
+                     {
+                        "name": "checked",
+                        "type": {
+                           "name": "image"
+                        },
+                        "plug": "input",
+                        "index": 4
+                     },
+                     {
+                        "name": "image1",
+                        "type": {
+                           "name": "image"
+                        },
+                        "plug": "output",
+                        "index": 5
+                     },
+                     {
+                        "name": "image2",
+                        "type": {
+                           "name": "image"
+                        },
+                        "plug": "output",
+                        "index": 6
+                     },
+                     {
+                        "name": "image3",
+                        "type": {
+                           "name": "image"
+                        },
+                        "plug": "output",
+                        "index": 7
+                     },
+                     {
+                        "name": "image4",
+                        "type": {
+                           "name": "image"
+                        },
+                        "plug": "output",
+                        "index": 8
+                     },
+                     {
+                        "name": "image5",
+                        "type": {
+                           "name": "image"
+                        },
+                        "plug": "output",
+                        "index": 9
+                     }
+                  ],
+                  "children": []
+               },
+               {
+                  "id": "708841c2-9b7f-0762-b6af-f732e0676804",
+                  "type": "Component Outputs",
+                  "x": 434,
+                  "y": 220,
+                  "parameters": {},
+                  "ports": [
+                     {
+                        "name": "Rating",
+                        "plug": "input",
+                        "type": {
+                           "name": "*"
+                        },
+                        "index": 0
                      }
                   ],
                   "dynamicports": [],
